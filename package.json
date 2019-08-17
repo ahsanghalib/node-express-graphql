@@ -1,0 +1,10 @@
+{
+  "name": "node-express-graphql",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Muhammad Ashan <ahsanghalib@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  }
+}
