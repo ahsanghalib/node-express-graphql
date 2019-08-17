@@ -5,6 +5,9 @@
   "author": "Muhammad Ashan <ahsanghalib@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
