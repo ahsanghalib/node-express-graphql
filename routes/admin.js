@@ -1,7 +1,11 @@
+// NPM Libaries
 const path = require('path');
 const express = require('express');
+
+// Our Package
 const rootDir = require('../utils/path');
 
+// Router init.
 const router = express.Router();
 
 // /admin/add-product => GET
@@ -15,4 +19,5 @@ router.post('/add-product', (req, res, next) => {
 	res.redirect('/');
 });
 
+// Module export
 module.exports = router;
