@@ -2,7 +2,7 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
-const expressHBS = require('express-handlebars');
+// const expressHBS = require('express-handlebars');  // for hbs
 
 // Our Packages
 const adminData = require('./routes/admin');
@@ -11,17 +11,22 @@ const rootDir = require('./utils/path');
 
 const app = express();
 
-// view engine
+// for pug
 // app.set('view engine', 'pug');
-app.engine(
-	'hbs',
-	expressHBS({
-		extname: 'hbs',
-		defaultLayout: 'main-layout',
-		layoutsDir: 'views/layouts/'
-	})
-);
-app.set('view engine', 'hbs');
+
+// for hbs
+// app.engine(
+// 	'hbs',
+// 	expressHBS({
+// 		extname: 'hbs',
+// 		defaultLayout: 'main-layout',
+// 		layoutsDir: 'views/layouts/'
+// 	})
+// );
+// app.set('view engine', 'hbs');
+
+// for ejs
+app.set('view engine', 'ejs');
 
 // setting views folder by default its views
 app.set('views', 'views');

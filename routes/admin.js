@@ -14,9 +14,10 @@ router.get('/add-product', (req, res, next) => {
 	res.render('add-product', {
 		docTitle: 'Add Product',
 		path: '/admin/add-product',
-		formsCSS: true,
-		productCSS: true,
-		activeAddProduct: true
+		// for hbs
+		// formsCSS: true,
+		// productCSS: true,
+		// activeAddProduct: true
 	});
 });
 
