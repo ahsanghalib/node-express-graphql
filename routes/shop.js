@@ -13,7 +13,15 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
 	// console.log('shop.js -> ', JSON.stringify(adminData.product, null, 2));
 	// res.sendFile(path.join(rootDir, 'views', 'shop.html'));
-	res.render('shop', { prods: adminData.product, docTitle: 'Shop', path: '/' });
+	const products = adminData.product;
+	res.render('shop', {
+		prods: products,
+		docTitle: 'Shop',
+		path: '/',
+		hasProducts: products.length > 0,
+		activeShop: true,
+		productCSS: true
+	});
 });
 
 // Module exports
