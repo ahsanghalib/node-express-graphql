@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 // Our Packages
-const adminRouter = require('./routes/admin');
+const adminData = require('./routes/admin');
 const shopRouter = require('./routes/shop');
 const rootDir = require('./utils/path');
 
@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 // Routes
-app.use('/admin', adminRouter);
+app.use('/admin', adminData.route);
 app.use(shopRouter);
 
 // 404 Page Request

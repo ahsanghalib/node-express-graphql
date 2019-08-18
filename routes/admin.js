@@ -15,9 +15,14 @@ router.get('/add-product', (req, res, next) => {
 
 // /admin/add-product => POST
 router.post('/add-product', (req, res, next) => {
-	console.log(req.body);
+	productArr.push({ title: req.body.title });
 	res.redirect('/');
 });
 
+// data product array shared across
+const productArr = [];
+
 // Module export
-module.exports = router;
+// module.exports = router;
+exports.route = router;
+exports.product = productArr;
