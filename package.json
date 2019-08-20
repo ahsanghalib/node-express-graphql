@@ -5,9 +5,13 @@
   "author": "Muhammad Ashan <ahsanghalib@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon --exec babel-node src/app.js"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "nodemon": "^1.19.1"
   },
   "dependencies": {
